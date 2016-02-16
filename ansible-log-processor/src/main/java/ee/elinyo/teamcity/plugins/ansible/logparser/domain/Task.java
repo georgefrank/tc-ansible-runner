@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class Task {
     
     private static final Pattern TASK_FIRST_LINE_PATTERN = Pattern
-            .compile("^(TASK|NOTIFIED):\\s+\\Q[\\E(.+)\\Q]\\E");
+            .compile("^(TASK|RUNNING HANDLER)\\s+\\Q[\\E(.+)\\Q]\\E");
 
     private long startedAt;
     private long finishedAt;
@@ -23,7 +23,7 @@ public class Task {
         Task t = null;
         if (matcher.find()) {
             t = new Task();
-            t.setNotified("NOTIFIED".equals(matcher.group(1)));
+            t.setNotified("RUNNING HANDLER".equals(matcher.group(1)));
             t.startedAt = startedAt;
             t.setName(matcher.group(2));
         }

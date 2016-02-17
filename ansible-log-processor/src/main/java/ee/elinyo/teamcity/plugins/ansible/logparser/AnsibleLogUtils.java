@@ -8,7 +8,7 @@ public final class AnsibleLogUtils {
     private static final String NOTIFIED_START = "RUNNING HANDLER [";
     private static final String GATHER_FACT_START = "GATHERING FACTS";
     private static final String FATAL_START = "FATAL:";
-    private static final String ERROR_START = "ERROR:";
+    private static final String ERROR_START = "ERROR!";
     private static final String RECAP_START = "PLAY RECAP";
     private static final String BUILD_META_START = "AR_BUILD_META:";
     
